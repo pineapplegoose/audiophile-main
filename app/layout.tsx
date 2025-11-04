@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope as Geist } from "next/font/google";
 import "./globals.css";
+import { NavBar } from "../components/nav-bar";
+import { ConvexClientProvider } from "./ConvexClientProvider";
+import { Footer } from "../components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} bg-[#000000] antialiased`}
       >
-        {children}
+        <ConvexClientProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </ConvexClientProvider>
       </body>
     </html>
   );
