@@ -7,7 +7,7 @@ export const Footer = () => {
                 <div>
                     <img src="/Audiophile-logo.png" className="w-[143px] mb-[24px]" alt="" />
                     <p className="w-[540px] text-[15px] text-white opacity-50">Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
-                    <p className="text-white font-bold opacity-50 mt-14">Copyright 2021. All Rights Reserved</p>
+                    <p className="text-white font-bold opacity-50 mt-14">Copyright {new Date().getFullYear()}. All Rights Reserved</p>
                 </div>
                 <div className="ml-[141px]">
                     <ul className='flex gap-9'>
