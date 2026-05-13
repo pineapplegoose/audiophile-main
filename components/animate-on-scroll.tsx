@@ -1,16 +1,16 @@
 'use client'
-import { motion } from 'motion/react'
-import { HTMLAttributes, ReactNode } from 'react'
+import { motion, type HTMLMotionProps } from 'motion/react'
+import { ReactNode } from 'react'
 
 const variants = {
-    fadeUp:    { hidden: { opacity: 0, y: 40  }, visible: { opacity: 1, y: 0  } },
-    fadeDown:  { hidden: { opacity: 0, y: -30 }, visible: { opacity: 1, y: 0  } },
-    fadeLeft:  { hidden: { opacity: 0, x: -60 }, visible: { opacity: 1, x: 0  } },
-    fadeRight: { hidden: { opacity: 0, x: 60  }, visible: { opacity: 1, x: 0  } },
-    fade:      { hidden: { opacity: 0         }, visible: { opacity: 1        } },
+    fadeUp: { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } },
+    fadeDown: { hidden: { opacity: 0, y: -30 }, visible: { opacity: 1, y: 0 } },
+    fadeLeft: { hidden: { opacity: 0, x: -60 }, visible: { opacity: 1, x: 0 } },
+    fadeRight: { hidden: { opacity: 0, x: 60 }, visible: { opacity: 1, x: 0 } },
+    fade: { hidden: { opacity: 0 }, visible: { opacity: 1 } },
 }
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
+interface Props extends Omit<HTMLMotionProps<'div'>, 'ref'> {
     variant?: keyof typeof variants
     delay?: number
     duration?: number

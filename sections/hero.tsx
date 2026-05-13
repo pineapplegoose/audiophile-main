@@ -45,7 +45,7 @@ export const Hero = () => {
                     </Link>
                 </motion.div>
             </div>
-            <img src={'/assets/home/desktop/image-hero.jpg'} className="absolute -z-10 inset-0 w-full h-full object-cover" alt="hero" />
+            <img src={'/assets/home/desktop/image-hero.jpg'} className="absolute -z-10 inset-0 object-cover" alt="hero" />
         </div>
     );
 };
